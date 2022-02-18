@@ -4,9 +4,8 @@
 </p>
 <br>
 
-PolyMC is a custom launcher for Minecraft that focuses on predictability, long term stability and simplicity.
+SneedMC is a sneedful launcher for Minecraft that focuses on sneedictability, long term sneedility, and sneedicity.
 
-This is a **fork** of the MultiMC Launcher and not endorsed by MultiMC. The PolyMC community felt that the maintainer was not acting in the spirit of Free Software so this fork was made.
 <br>
 
 # Installation
@@ -27,17 +26,17 @@ This is a **fork** of the MultiMC Launcher and not endorsed by MultiMC. The Poly
 
 There are several AUR packages available:
 
-[![polymc](https://img.shields.io/badge/aur-polymc-blue)](https://aur.archlinux.org/packages/polymc/)
-[![polymc-bin](https://img.shields.io/badge/aur-polymc--bin-blue)](https://aur.archlinux.org/packages/polymc-bin/)
-[![polymc-git](https://img.shields.io/badge/aur-polymc--git-blue)](https://aur.archlinux.org/packages/polymc-git/)
+[![sneedmc](https://img.shields.io/badge/aur-sneedmc-blue)](https://aur.archlinux.org/packages/sneedmc/)
+[![sneedmc-bin](https://img.shields.io/badge/aur-sneedmc--bin-blue)](https://aur.archlinux.org/packages/sneedmc-bin/)
+[![sneedmc-git](https://img.shields.io/badge/aur-sneedmc--git-blue)](https://aur.archlinux.org/packages/sneedmc-git/)
 
 ```sh
 # stable source package:
-yay -S polymc
+yay -S sneedmc
 # stable binary package:
-yay -S polymc-bin
+yay -S sneedmc-bin
 # latest git package:
-yay -S polymc-git
+yay -S sneedmc-git
 ```
 
 ### <img src="https://www.vectorlogo.zone/logos/debian/debian-icon.svg" height="20" /> Debian
@@ -45,17 +44,17 @@ yay -S polymc-git
 We use [makedeb](https://docs.makedeb.org/) for our Debian packages.
 Several MPR packages are available:
 
-[![polymc](https://img.shields.io/badge/mpr-polymc-orange)](https://mpr.makedeb.org/packages/polymc)
-[![polymc-bin](https://img.shields.io/badge/mpr-polymc--bin-orange)](https://mpr.makedeb.org/packages/polymc-bin)
-[![polymc-git](https://img.shields.io/badge/mpr-polymc--git-orange)](https://mpr.makedeb.org/packages/polymc-git)
+[![sneedmc](https://img.shields.io/badge/mpr-sneedmc-orange)](https://mpr.makedeb.org/packages/sneedmc)
+[![sneedmc-bin](https://img.shields.io/badge/mpr-sneedmc--bin-orange)](https://mpr.makedeb.org/packages/sneedmc-bin)
+[![sneedmc-git](https://img.shields.io/badge/mpr-sneedmc--git-orange)](https://mpr.makedeb.org/packages/sneedmc-git)
 
 ```sh
 # stable source package:
-sudo tap install polymc
+sudo tap install sneedmc
 # stable binary package:
-sudo tap install polymc-bin
+sudo tap install sneedmc-bin
 # latest git package:
-sudo tap install polymc-git
+sudo tap install sneedmc-git
 ```
 
 ### <img src="https://www.vectorlogo.zone/logos/nixos/nixos-icon.svg" height="20" /> Nix
@@ -64,16 +63,16 @@ A [Nix derivation](packages/nix/NIX.md) is available.
 
 ### <img src="https://www.gentoo.org/assets/img/logo/gentoo-signet.svg" height="20" /> Gentoo
 
-A Gentoo ebuild is available in the [swirl](https://git.swurl.xyz/swirl/ebuilds) overlay, named `games-action/polymc`.
+A Gentoo ebuild is available in the [sneed](https://git.swurl.xyz/Sneederix/overlay) overlay, named `games-action/sneedmc`.
 
 ```sh
 # as root:
 emerge --oneshot eselect-repository
-eselect repository enable swirl
-emaint sync -r swirl
-emerge polymc
+eselect repository enable sneed
+emaint sync -r sneed
+emerge sneedmc
 # to use latest git version:
-sudo tee -a /etc/portage/package.accept_keywords <<< "=games-action/polymc-9999 **"
+sudo tee -a /etc/portage/package.accept_keywords <<< "=games-action/sneedmc-9999 **"
 ```
 
 ### <img src="https://www.vectorlogo.zone/logos/getfedora/getfedora-icon.svg" height="20"> Fedora
@@ -174,4 +173,4 @@ The translation effort for PolyMC is hosted on [Weblate](https://hosted.weblate.
 
 ## Forking/Redistributing/Custom builds policy
 
-Do whatever you want, we don't care. Just follow the license. If you have any questions about this feel free to ask in an issue.
+SNEED
