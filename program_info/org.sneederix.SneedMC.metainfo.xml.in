@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
-  <id>org.polymc.PolyMC</id>
+  <id>org.sneederix.SneedMC</id>
   <provides>
-    <id>org.polymc.PolyMC</id>
+    <id>org.sneederix.SneedMC</id>
   </provides>
-  <launchable type="desktop-id">org.polymc.PolyMC.desktop</launchable>
-  <name>PolyMC</name>
-  <developer_name>PolyMC Team</developer_name>
+  <launchable type="desktop-id">org.sneederix.SneedMC.desktop</launchable>
+  <name>SneedMC</name>
+  <developer_name>SneedMC Team</developer_name>
   <summary>A custom launcher for Minecraft that allows you to easily manage multiple installations of Minecraft at once</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
-  <url type="homepage">https://polymc.org/</url>
-  <url type="help">https://github.com/PolyMC/PolyMC#help--support</url>
+  <url type="homepage">https://SneedMC.org/</url>
+  <url type="help">https://github.com/Sneederix/SneedMC#help--support</url>
   <description>
-    <p>PolyMC is a custom launcher for Minecraft that focuses on predictability, long term stability and simplicity.</p>
+    <p>SneedMC is a custom launcher for Minecraft that focuses on predictability, long term stability and simplicity.</p>
     <p>Features:</p>
     <ul>
       <li>Easily install game modifications, such as Fabric or Forge</li>
@@ -27,7 +27,7 @@
   </description>
   <screenshots>
     <screenshot type="default">
-      <caption>The main PolyMC window</caption>
+      <caption>The main SneedMC window</caption>
       <image type="source" width="1011" height="994">https://polymc.github.io/assets/img/screenshots/LauncherDark.png</image>
     </screenshot>
     <screenshot>

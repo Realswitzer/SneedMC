@@ -46,8 +46,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DQT_NO_DEPRECATED_WARNINGS=Y")
 ##################################### Set Application options #####################################
 
 ######## Set URLs ########
-set(Launcher_NEWS_RSS_URL "https://polymc.github.io/feed/feed.xml" CACHE STRING "URL to fetch PolyMC's news RSS feed from.")
-set(Launcher_NEWS_OPEN_URL "https://polymc.github.io/news/" CACHE STRING "URL that gets opened when the user clicks 'More News'")
+set(Launcher_NEWS_RSS_URL "https://multimc.org/rss.xml" CACHE STRING "URL to fetch PolyMC's news RSS feed from.")
+set(Launcher_NEWS_OPEN_URL "https://multimc.org/posts.html" CACHE STRING "URL that gets opened when the user clicks 'More News'")
 
 ######## Set version numbers ########
 set(Launcher_VERSION_MAJOR    1)
@@ -67,7 +67,7 @@ set(Launcher_UPDATER_BASE "" CACHE STRING "Base URL for the updater.")
 set(Launcher_NOTIFICATION_URL "" CACHE STRING "URL for checking for notifications.")
 
 # The metadata server
-set(Launcher_META_URL "https://meta.polymc.org/v1/" CACHE STRING "URL to fetch Launcher's meta files from.")
+set(Launcher_META_URL "https://meta.multimc.org/v1/" CACHE STRING "URL to fetch Launcher's meta files from.")
 
 # Imgur API Client ID
 set(Launcher_IMGUR_CLIENT_ID "5b97b0713fba4a3" CACHE STRING "Client ID you can get from Imgur when you register an application")
@@ -76,10 +76,10 @@ set(Launcher_IMGUR_CLIENT_ID "5b97b0713fba4a3" CACHE STRING "Client ID you can g
 set(Launcher_MSA_CLIENT_ID "17b47edd-c884-4997-926d-9e7f9a6b4647" CACHE STRING "Client ID you can get from Microsoft Identity Platform when you register an application")
 
 # Bug tracker URL
-set(Launcher_BUG_TRACKER_URL "https://github.com/PolyMC/PolyMC/issues" CACHE STRING "URL for the bug tracker.")
+set(Launcher_BUG_TRACKER_URL "https://github.com/Sneederix/SneedMC/issues" CACHE STRING "URL for the bug tracker.")
 
 # Translations Platform URL
-set(Launcher_TRANSLATIONS_URL "https://hosted.weblate.org/projects/polymc/polymc/" CACHE STRING "URL for the translations platform.")
+set(Launcher_TRANSLATIONS_URL "" CACHE STRING "URL for the translations platform.")
 
 # Discord URL
 set(Launcher_DISCORD_URL "https://discord.gg/Z52pwxWCHP" CACHE STRING "URL for the Discord guild.")
@@ -141,7 +141,7 @@ endif()
 
 ####################################### Program Info #######################################
 
-set(Launcher_APP_BINARY_NAME "polymc" CACHE STRING "Name of the Launcher binary")
+set(Launcher_APP_BINARY_NAME "sneedmc" CACHE STRING "Name of the Launcher binary")
 add_subdirectory(program_info)
 
 ####################################### Install layout #######################################
@@ -179,7 +179,7 @@ if(Launcher_LAYOUT_REAL STREQUAL "mac-bundle")
     # Mac bundle settings
     set(MACOSX_BUNDLE_BUNDLE_NAME "${Launcher_Name}")
     set(MACOSX_BUNDLE_INFO_STRING "${Launcher_Name}:  Minecraft launcher and management utility.")
-    set(MACOSX_BUNDLE_GUI_IDENTIFIER "org.polymc.${Launcher_Name}")
+    set(MACOSX_BUNDLE_GUI_IDENTIFIER "org.sneederix.${Launcher_Name}")
     set(MACOSX_BUNDLE_BUNDLE_VERSION "${Launcher_VERSION_MAJOR}.${Launcher_VERSION_MINOR}.${Launcher_VERSION_HOTFIX}.${Launcher_VERSION_BUILD}")
     set(MACOSX_BUNDLE_SHORT_VERSION_STRING "${Launcher_VERSION_MAJOR}.${Launcher_VERSION_MINOR}.${Launcher_VERSION_HOTFIX}.${Launcher_VERSION_BUILD}")
     set(MACOSX_BUNDLE_LONG_VERSION_STRING "${Launcher_VERSION_MAJOR}.${Launcher_VERSION_MINOR}.${Launcher_VERSION_HOTFIX}.${Launcher_VERSION_BUILD}")
@@ -216,7 +216,7 @@ elseif(Launcher_LAYOUT_REAL STREQUAL "lin-nodeps")
 elseif(Launcher_LAYOUT_REAL STREQUAL "lin-system")
     set(Launcher_BINARY_DEST_DIR "bin" CACHE STRING "Path to the binary directory")
     set(Launcher_LIBRARY_DEST_DIR "lib${LIB_SUFFIX}" CACHE STRING "Path to the library directory")
-    set(Launcher_SHARE_DEST_DIR "share/polymc" CACHE STRING "Path to the shared data directory")
+    set(Launcher_SHARE_DEST_DIR "share/sneedmc" CACHE STRING "Path to the shared data directory")
     set(JARS_DEST_DIR "${Launcher_SHARE_DEST_DIR}/jars")
     set(Launcher_DESKTOP_DEST_DIR "share/applications" CACHE STRING "Path to the desktop file directory")
     set(Launcher_METAINFO_DEST_DIR "share/metainfo" CACHE STRING "Path to the metainfo directory")

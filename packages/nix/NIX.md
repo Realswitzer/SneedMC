@@ -3,29 +3,29 @@
 To import with flakes use
 ```nix
 inputs = {
-  polymc.url = "github:PolyMC/PolyMC";
+  sneedmc.url = "github:Sneederix/SneedMC";
 };
 
 ...
 
-nixpkgs.overlays = [ inputs.polymc.overlay ]; ## Within configuration.nix
-environment.systemPackages = with pkgs; [ polymc ]; ##
+nixpkgs.overlays = [ inputs.sneedmc.overlay ]; ## Within configuration.nix
+environment.systemPackages = with pkgs; [ sneedmc ]; ##
 ```
 
 To import without flakes use channels:
 
 ```
-nix-channel --add https://github.com/PolyMC/PolyMC/archive/master.tar.gz polymc
-nix-channel --update polymc
-nix-env -iA polymc
+nix-channel --add https://github.com/Sneederix/SneedMC/archive/master.tar.gz sneedmc
+nix-channel --update sneedmc
+nix-env -iA sneedmc
 ```
 
 or alternatively you can use
 
 ```
 nixpkgs.overlays = [
-  (import (builtins.fetchTarball "https://github.com/PolyMC/PolyMC/archive/develop.tar.gz")).overlay
+  (import (builtins.fetchTarball "https://github.com/Sneederix/SneedMC/archive/develop.tar.gz")).overlay
 ];
 
-environment.systemPackages = with pkgs; [ polymc ];
+environment.systemPackages = with pkgs; [ sneedmc ];
 ```

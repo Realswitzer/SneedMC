@@ -1,6 +1,6 @@
-# PolyMC Program Info
+# SneedMC Program Info
 
-This is PolyMC's program info which contains information about:
+This is SneedMC's program info which contains information about:
 - Application name and logo (and branding in general)
 - Various URLs and API endpoints
 - Desktop file

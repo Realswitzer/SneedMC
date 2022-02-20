@@ -30,14 +30,14 @@ let
     libXxf86vm
     libpulseaudio
     libGL
-  ]; 
+  ];
 
-  # This variable will be passed to Minecraft by PolyMC
+  # This variable will be passed to Minecraft by SneedMC
   gameLibraryPath = libpath + ":/run/opengl-driver/lib";
 in
 
 mkDerivation rec {
-  pname = "polymc";
+  pname = "sneedmc";
   version = "nightly";
 
   src = lib.cleanSource self;
@@ -74,7 +74,7 @@ mkDerivation rec {
 
   postInstall = ''
     # xorg.xrandr needed for LWJGL [2.9.2, 3) https://github.com/LWJGL/lwjgl/issues/128
-    wrapProgram $out/bin/polymc \
+    wrapProgram $out/bin/sneedmc \
       "''${qtWrapperArgs[@]}" \
       --set GAME_LIBRARY_PATH ${gameLibraryPath} \
       --prefix PATH : ${lib.makeBinPath [ xorg.xrandr ]}

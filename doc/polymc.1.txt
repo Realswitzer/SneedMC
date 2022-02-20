@@ -1,35 +1,35 @@
-POLYMC(1)
+SNEEDMC(1)
 ==========
 :doctype: manpage
 
 
 NAME
 ----
-polymc - a launcher and instance manager for Minecraft.
+sneedmc - a launcher and instance manager for Minecraft.
 
 
 SYNOPSIS
 --------
-*polymc* ['OPTIONS']
+*sneedmc* ['OPTIONS']
 
 
 DESCRIPTION
 -----------
-PolyMC is a custom launcher for Minecraft that allows you to easily manage
+SneedMC is a custom launcher for Minecraft that allows you to easily manage
 multiple installations of Minecraft at once. It also allows you to easily
 install and remove mods by simply dragging and dropping.
-Here are the current features of PolyMC.
+Here are the current features of SneedMC.
 
 OPTIONS
 -------
 *-d, --dir*='DIRECTORY'::
-    Use 'DIRECTORY' as the PolyMC root.
+    Use 'DIRECTORY' as the SneedMC root.
 
 *-l, --launch*='INSTANCE_ID'::
     Launch the instance specified by 'INSTANCE_ID'.
 
 *--alive*::
-    Write a small 'live.check' file after PolyMC starts.
+    Write a small 'live.check' file after SneedMC starts.
 
 *-h, --help*::
     Display help text and exit.
@@ -49,18 +49,16 @@ EXIT STATUS
 
 BUGS
 ----
-<https://github.com/PolyMC/PolyMC/issues>
+<https://github.com/Sneederix/SneedMC/issues>
 
 RESOURCES
 ---------
-GitHub: <https://github.com/PolyMC/PolyMC>
+GitHub: <https://github.com/Sneederix/SneedMC>
 
-Main website: <https://polymc.org>
+Main website: <https://sneedmc.org>
 
 AUTHORS
 -------
-peterix <peterix@gmail.com>
-
-swurl <swurl@swurl.xyz>
+SNEED <sneed@sneedmc.org>
 
 // vim: syntax=asciidoc

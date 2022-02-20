@@ -12,8 +12,8 @@
 Clone the source code using git and grab all the submodules:
 
 ```
-git clone https://github.com/PolyMC/PolyMC.git
-cd PolyMC
+git clone https://github.com/Sneederix/SneedMC.git
+cd SneedMC
 git submodule init
 git submodule update
 ```
@@ -66,8 +66,8 @@ make -j$(nproc) install # Optionally specify DESTDIR for packages (i.e. DESTDIR=
 Requirements: [makedeb](https://docs.makedeb.org/) installed on your system.
 
 ```
-git clone https://mpr.makedeb.org/polymc.git
-cd polymc
+git clone https://mpr.makedeb.org/sneedmc.git
+cd sneedmc
 makedeb -s
 ```
 
@@ -76,7 +76,7 @@ The deb will be located in the directory the repo was cloned in.
 ### Building an .rpm
 
 Build dependencies are automatically installed using `dnf`, but you do need the `rpmdevtools` package (on Fedora)
-in order to fetch sources and setup your tree.  
+in order to fetch sources and setup your tree.
 You don't need to clone the repo for this; the spec file handles that
 
 ```
@@ -121,14 +121,14 @@ sudo /sbin/installpkg /tmp/polymc-version-arch-1_SBo.tgz # install the created p
 
 ### Building a flatpak
 
-You don't need to clone the entire PolyMC repo for this; the flatpak file handles that.  
+You don't need to clone the entire SneedMC repo for this; the flatpak file handles that.
 `flatpak` and `flatpak-builder` need to be installed on your system
 
 ```sh
-git clone https://github.com/flathub/org.polymc.PolyMC
-cd org.polymc.PolyMC
+git clone https://github.com/flathub/org.sneederix.SneedMC
+cd org.sneederix.SneedMC
 # remove --user --install if you want to build without installing
-flatpak-builder --user --install flatbuild org.polymc.PolyMC.yml
+flatpak-builder --user --install flatbuild org.sneederix.SneedMC.yml
 ```
 
 ### Installing Qt using the installer (optional)
@@ -248,12 +248,12 @@ zlib1.dll
 ### Compile from command line on Windows
 
 1. If you installed Qt with the web installer, there should be a shortcut called `Qt 5.4 for Desktop (MinGW 4.9 32-bit)` in the Start menu on Windows 7 and 10. Best way to find it is to search for it. Do note you cannot just use cmd.exe, you have to use the shortcut, otherwise the proper MinGW software will not be on the PATH.
-2. Once that is open, change into your user directory, and clone PolyMC by doing `git clone --recursive https://github.com/PolyMC/PolyMC.git`, and change directory to the folder you cloned to.
+2. Once that is open, change into your user directory, and clone SneedMC by doing `git clone --recursive https://github.com/Sneederix/SneedMC.git`, and change directory to the folder you cloned to.
 3. Make a build directory, and change directory to the directory and do `cmake -G "MinGW Makefiles" -DCMAKE_INSTALL_PREFIX=C:\Path\that\makes\sense\for\you`. By default, it will install to C:\Program Files (x86), which you might not want, if you want a local installation. If you want to install it to that directory, make sure to run the command window as administrator.
 4. Do `mingw32-make -jX`, where X is the number of cores your CPU has plus one.
 5. Now to wait for it to compile. This could take some time. Hopefully it compiles properly.
-6. Run the command `mingw32-make install`, and it should install PolyMC, to whatever the `-DCMAKE_INSTALL_PREFIX` was.
-7. In most cases, whenever compiling, the OpenSSL dll's aren't put into the directory to where PolyMC installs, meaning you cannot log in. The best way to fix this is just to do `copy C:\OpenSSL-Win32\*.dll C:\Where\you\installed\PolyMC\to`. This should copy the required OpenSSL dll's to log in.
+6. Run the command `mingw32-make install`, and it should install SneedMC, to whatever the `-DCMAKE_INSTALL_PREFIX` was.
+7. In most cases, whenever compiling, the OpenSSL dll's aren't put into the directory to where SneedMC installs, meaning you cannot log in. The best way to fix this is just to do `copy C:\OpenSSL-Win32\*.dll C:\Where\you\installed\SneedMC\to`. This should copy the required OpenSSL dll's to log in.
 
 # macOS
 
@@ -276,7 +276,7 @@ xcode-select --install
 
 ### Build
 
-Pick an installation path - this is where the final `PolyMC.app` will be constructed when you run `make install`. Supply it as the `CMAKE_INSTALL_PREFIX` argument during CMake configuration. By default, it's in the dist folder under PolyMC
+Pick an installation path - this is where the final `SneedMC.app` will be constructed when you run `make install`. Supply it as the `CMAKE_INSTALL_PREFIX` argument during CMake configuration. By default, it's in the dist folder under SneedMC
 
 ```
 mkdir build
