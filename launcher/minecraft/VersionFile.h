@@ -27,19 +27,19 @@ public: /* methods */
     void applyTo(LaunchProfile* profile);
 
 public: /* data */
-    /// PolyMC: order hint for this version file if no explicit order is set
+    /// SneedMC: order hint for this version file if no explicit order is set
     int order = 0;
 
-    /// PolyMC: human readable name of this package
+    /// SneedMC: human readable name of this package
     QString name;
 
-    /// PolyMC: package ID of this package
+    /// SneedMC: package ID of this package
     QString uid;
 
-    /// PolyMC: version of this package
+    /// SneedMC: version of this package
     QString version;
 
-    /// PolyMC: DEPRECATED dependency on a Minecraft version
+    /// SneedMC: DEPRECATED dependency on a Minecraft version
     QString dependsOnMinecraftVersion;
 
     /// Mojang: DEPRECATED used to version the Mojang version format
@@ -51,7 +51,7 @@ public: /* data */
     /// Mojang: class to launch Minecraft with
     QString mainClass;
 
-    /// PolyMC: class to launch legacy Minecraft with (embed in a custom window)
+    /// SneedMC: class to launch legacy Minecraft with (embed in a custom window)
     QString appletClass;
 
     /// Mojang: Minecraft launch arguments (may contain placeholders for variable substitution)
@@ -69,35 +69,35 @@ public: /* data */
     /// Mojang: DEPRECATED asset group to be used with Minecraft
     QString assets;
 
-    /// PolyMC: list of tweaker mod arguments for launchwrapper
+    /// SneedMC: list of tweaker mod arguments for launchwrapper
     QStringList addTweakers;
 
     /// Mojang: list of libraries to add to the version
     QList<LibraryPtr> libraries;
 
-    /// PolyMC: list of maven files to put in the libraries folder, but not in classpath
+    /// SneedMC: list of maven files to put in the libraries folder, but not in classpath
     QList<LibraryPtr> mavenFiles;
 
     /// The main jar (Minecraft version library, normally)
     LibraryPtr mainJar;
 
-    /// PolyMC: list of attached traits of this version file - used to enable features
+    /// SneedMC: list of attached traits of this version file - used to enable features
     QSet<QString> traits;
 
-    /// PolyMC: list of jar mods added to this version
+    /// SneedMC: list of jar mods added to this version
     QList<LibraryPtr> jarMods;
 
-    /// PolyMC: list of mods added to this version
+    /// SneedMC: list of mods added to this version
     QList<LibraryPtr> mods;
 
     /**
-     * PolyMC: set of packages this depends on
+     * SneedMC: set of packages this depends on
      * NOTE: this is shared with the meta format!!!
      */
     Meta::RequireSet requires;
 
     /**
-     * PolyMC: set of packages this conflicts with
+     * SneedMC: set of packages this conflicts with
      * NOTE: this is shared with the meta format!!!
      */
     Meta::RequireSet conflicts;

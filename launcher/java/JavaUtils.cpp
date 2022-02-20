@@ -77,14 +77,14 @@ QProcessEnvironment CleanEnviroment()
             qDebug() << "Env: ignoring" << key << value;
             continue;
         }
-        // filter PolyMC-related things
+        // filter SneedMC-related things
         if(key.startsWith("QT_"))
         {
             qDebug() << "Env: ignoring" << key << value;
             continue;
         }
 #if defined(Q_OS_LINUX) || defined(Q_OS_FREEBSD)
-        // Do not pass LD_* variables to java. They were intended for PolyMC
+        // Do not pass LD_* variables to java. They were intended for SneedMC
         if(key.startsWith("LD_"))
         {
             qDebug() << "Env: ignoring" << key << value;
@@ -151,7 +151,7 @@ JavaInstallPtr JavaUtils::GetDefaultJava()
 
 QStringList addJavasFromEnv(QList<QString> javas)
 {
-    QByteArray env = qgetenv("POLYMC_JAVA_PATHS");
+    QByteArray env = qgetenv("SNEEDMC_JAVA_PATHS");
 #if defined(Q_OS_WIN32)
     QList<QString> javaPaths = QString::fromLocal8Bit(env).split(QLatin1String(";"));
 #else
@@ -417,7 +417,7 @@ QList<QString> JavaUtils::FindJavaPaths()
     scanJavaDir("/usr/lib/jvm");
     scanJavaDir("/usr/lib64/jvm");
     scanJavaDir("/usr/lib32/jvm");
-    // javas stored in PolyMC's folder
+    // javas stored in SneedMC's folder
     scanJavaDir("java");
     // manually installed JDKs in /opt
     scanJavaDir("/opt/jdk");

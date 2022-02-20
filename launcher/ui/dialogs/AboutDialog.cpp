@@ -33,6 +33,10 @@ QString getCreditsHtml()
     stream.setCodec(QTextCodec::codecForName("UTF-8"));
     stream << "<center>\n";
 
+    stream << "<h3>" << QObject::tr("SneedMC Developers", "About Credits") << "</h3>\n";
+    stream << "<p>sneedium &lt;<a href='mailto:sneed@sneedmc.org'>sneed@sneedmc.org </a>&gt;</p>\n";
+    stream << "<br />\n";
+
     stream << "<h3>" << QObject::tr("PolyMC Developers", "About Credits") << "</h3>\n";
     stream << "<p>swirl &lt;<a href='mailto:swurl@swurl.xyz'>swurl@swurl.xyz </a>&gt;</p>\n";
     stream << "<p>LennyMcLennington &lt;<a href='mailto:lenny@sneed.church'>lenny@sneed.church</a>&gt;</p>\n";

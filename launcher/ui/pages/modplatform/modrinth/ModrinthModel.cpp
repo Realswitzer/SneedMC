@@ -254,7 +254,7 @@ void Modrinth::ListModel::searchRequestFailed(QString reason)
 {
     if(jobPtr->first()->m_reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt() == 409){
         //409 Gone, notify user to update
-        QMessageBox::critical(nullptr, tr("Error"), tr("Modrinth API version too old!\nPlease update PolyMC!"));
+        QMessageBox::critical(nullptr, tr("Error"), tr("Modrinth API version too old!\nPlease update SneedMC!"));
         //self-destruct
         ((ModDownloadDialog *)((ModrinthPage *)parent())->parentWidget())->reject();
     }
@@ -273,4 +273,3 @@ void Modrinth::ListModel::searchRequestFailed(QString reason)
 }
 
 }
-

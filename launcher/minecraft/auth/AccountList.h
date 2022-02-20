@@ -24,7 +24,7 @@
 
 /*!
  * List of available Mojang accounts.
- * This should be loaded in the background by PolyMC on startup.
+ * This should be loaded in the background by SneedMC on startup.
  */
 class AccountList : public QAbstractListModel
 {

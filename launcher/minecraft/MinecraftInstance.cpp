@@ -445,7 +445,7 @@ QStringList MinecraftInstance::processMinecraftArgs(
     }
 
     // blatant self-promotion.
-    token_mapping["profile_name"] = token_mapping["version_name"] = "PolyMC";
+    token_mapping["profile_name"] = token_mapping["version_name"] = "SneedMC";
 
     token_mapping["version_type"] = profile->getMinecraftVersionType();
 

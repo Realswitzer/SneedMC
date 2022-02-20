@@ -81,7 +81,7 @@ mkDerivation rec {
   '';
 
   meta = with lib; {
-    homepage = "https://polymc.org/";
+    homepage = "https://sneedmc.org/";
     description = "A free, open source launcher for Minecraft";
     longDescription = ''
       Allows you to have multiple, separate instances of Minecraft (each with

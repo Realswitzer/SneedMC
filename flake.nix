@@ -1,5 +1,5 @@
 {
-  description = "PolyMC flake";
+  description = "SneedMC flake";
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   inputs.flake-utils.url = "github:numtide/flake-utils";
   inputs.flake-compat = {
@@ -26,25 +26,25 @@
       ];
     in {
       overlay = final: prev: {
-        inherit (self.packages.${final.system}) polymc;
+        inherit (self.packages.${final.system}) sneedmc;
       };
     } // flake-utils.lib.eachSystem systems (system:
       let pkgs = import nixpkgs { inherit system; };
       in {
         packages = {
-          polymc = pkgs.libsForQt5.callPackage ./packages/nix/polymc {
+          sneedmc = pkgs.libsForQt5.callPackage ./packages/nix/sneedmc {
             inherit self;
             submoduleQuazip = quazip;
             submoduleNbt = libnbtplusplus;
           };
         };
         apps = {
-          polymc = flake-utils.lib.mkApp {
-            name = "polymc";
-            drv = self.packages.${system}.polymc;
+          sneedmc = flake-utils.lib.mkApp {
+            name = "sneedmc";
+            drv = self.packages.${system}.sneedmc;
           };
         };
-        defaultPackage = self.packages.${system}.polymc;
-        defaultApp = self.apps.${system}.polymc;
+        defaultPackage = self.packages.${system}.sneedmc;
+        defaultApp = self.apps.${system}.sneedmc;
       });
 }
