@@ -1,8 +1,9 @@
 <p align="center">
-  <img src="./program_info/polymc-header-black.svg#gh-light-mode-only" alt="PolyMC logo"/>
-  <img src="./program_info/polymc-header.svg#gh-dark-mode-only" alt="PolyMC logo"/>
+  <img src="./program_info/org.sneederix.SneedMC.svg" alt="SneedMC logo"/>
 </p>
 <br>
+
+# SneedMC
 
 SneedMC is a sneedful launcher for Minecraft that focuses on sneedictability, long term sneedility, and sneedicity.
 

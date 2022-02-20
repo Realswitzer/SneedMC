@@ -1,6 +1,6 @@
 set(Launcher_CommonName "SneedMC")
 
-set(Launcher_Copyright "Sneederix 2022" PARENT_SCOPE)
+set(Launcher_Copyright "Sneederix" PARENT_SCOPE)
 set(Launcher_Domain "sneedmc.org" PARENT_SCOPE)
 set(Launcher_Name "${Launcher_CommonName}" PARENT_SCOPE)
 set(Launcher_DisplayName "${Launcher_CommonName}" PARENT_SCOPE)
