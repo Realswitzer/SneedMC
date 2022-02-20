@@ -43,3 +43,4 @@ private:
     bool m_aborted = false;
     Net::Mode m_mode = Net::Mode::Offline;
 };
+

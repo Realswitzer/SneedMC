@@ -7,7 +7,6 @@
 #include <QIcon>
 #include <QDateTime>
 #include <QUrl>
-#include <updater/GoUpdate.h>
 
 #include <BaseInstance.h>
 
@@ -27,7 +26,6 @@ class AccountList;
 class IconList;
 class QNetworkAccessManager;
 class JavaInstallList;
-class UpdateChecker;
 class BaseProfilerFactory;
 class BaseDetachedToolFactory;
 class TranslationsModel;
@@ -74,10 +72,6 @@ public:
     std::vector<ITheme *> getValidApplicationThemes();
 
     void setApplicationTheme(const QString& name, bool initial);
-
-    shared_qobject_ptr<UpdateChecker> updateChecker() {
-        return m_updateChecker;
-    }
 
     std::shared_ptr<TranslationsModel> translations();
 
@@ -133,13 +127,9 @@ public:
     InstanceWindow *showInstanceWindow(InstancePtr instance, QString page = QString());
     MainWindow *showMainWindow(bool minimized = false);
 
-    void updateIsRunning(bool running);
-    bool updatesAreAllowed();
-
     void ShowGlobalSettings(class QWidget * parent, QString open_page = QString());
 
 signals:
-    void updateAllowedChanged(bool status);
     void globalSettingsAboutToOpen();
     void globalSettingsClosed();
 
@@ -177,7 +167,6 @@ private:
 
     shared_qobject_ptr<QNetworkAccessManager> m_network;
 
-    shared_qobject_ptr<UpdateChecker> m_updateChecker;
     shared_qobject_ptr<AccountList> m_accounts;
 
     shared_qobject_ptr<HttpMetaCache> m_metacache;
@@ -214,7 +203,6 @@ private:
     // main state variables
     size_t m_openWindows = 0;
     size_t m_runningInstances = 0;
-    bool m_updateRunning = false;
 
     // main window, if any
     MainWindow * m_mainWindow = nullptr;

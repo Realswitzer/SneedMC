@@ -7,6 +7,7 @@
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QFile>
+#include <QHttpMultiPart>
 
 PasteUpload::PasteUpload(QWidget *window, QString text, QString url) : m_window(window), m_uploadUrl(url), m_text(text.toUtf8())
 {

@@ -6,6 +6,7 @@
 #include <QIcon>
 #include <QScrollBar>
 #include <QShortcut>
+#include <QIdentityProxyModel>
 
 #include "launch/LaunchTask.h"
 #include "settings/Setting.h"

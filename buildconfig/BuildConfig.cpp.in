@@ -24,7 +24,6 @@ Config::Config()
     VERSION_BUILD = @Launcher_VERSION_BUILD@;
 
     BUILD_PLATFORM = "@Launcher_BUILD_PLATFORM@";
-    UPDATER_BASE = "@Launcher_UPDATER_BASE@";
     NOTIFICATION_URL = "@Launcher_NOTIFICATION_URL@";
     FULL_VERSION_STR = "@Launcher_VERSION_MAJOR@.@Launcher_VERSION_MINOR@.@Launcher_VERSION_BUILD@";
 
@@ -34,9 +33,6 @@ Config::Config()
     {
         VERSION_CHANNEL = GIT_REFSPEC;
         VERSION_CHANNEL.remove("refs/heads/");
-        if(!UPDATER_BASE.isEmpty() && !BUILD_PLATFORM.isEmpty() && VERSION_BUILD >= 0) {
-            UPDATER_ENABLED = true;
-        }
     }
     else if (!GIT_COMMIT.isEmpty())
     {

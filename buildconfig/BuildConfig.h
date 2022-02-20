@@ -25,20 +25,8 @@ public:
     /// The build number.
     int VERSION_BUILD;
 
-    /**
-     * The version channel
-     * This is used by the updater to determine what channel the current version came from.
-     */
-    QString VERSION_CHANNEL;
-
-    bool UPDATER_ENABLED = false;
-
     /// A short string identifying this build's platform. For example, "lin64" or "win32".
     QString BUILD_PLATFORM;
-
-    /// URL for the updater's channel
-    QString UPDATER_BASE;
-
 
     /// User-Agent to use.
     QString USER_AGENT;
@@ -46,6 +34,7 @@ public:
     /// User-Agent to use for uncached requests.
     QString USER_AGENT_UNCACHED;
 
+    QString VERSION_CHANNEL;
 
     /// URL for notifications
     QString NOTIFICATION_URL;

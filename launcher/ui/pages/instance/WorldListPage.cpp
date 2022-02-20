@@ -25,6 +25,7 @@
 #include <QTreeView>
 #include <QInputDialog>
 #include <QProcess>
+#include <QSortFilterProxyModel>
 
 #include "tools/MCEditTool.h"
 #include "FileSystem.h"

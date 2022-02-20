@@ -24,7 +24,6 @@
 #include "BaseInstance.h"
 #include "minecraft/auth/MinecraftAccount.h"
 #include "net/NetJob.h"
-#include "updater/GoUpdate.h"
 
 class LaunchController;
 class NewsChecker;
@@ -54,8 +53,6 @@ public:
     void changeEvent(QEvent * event) override;
 
     void checkInstancePathForProblems();
-
-    void updatesAllowedChanged(bool allowed);
 
     void droppedURLs(QList<QUrl> urls);
 signals:
@@ -98,8 +95,6 @@ private slots:
     void refreshInstances();
 
     void on_actionViewCentralModsFolder_triggered();
-
-    void checkForUpdates();
 
     void on_actionSettings_triggered();
 
@@ -162,10 +157,6 @@ private slots:
 
     void startTask(Task *task);
 
-    void updateAvailable(GoUpdate::Status status);
-
-    void updateNotAvailable();
-
     void notificationsChanged();
 
     void defaultAccountChanged();
@@ -175,11 +166,6 @@ private slots:
     void repopulateAccountsMenu();
 
     void updateNewsLabel();
-
-    /*!
-     * Runs the DownloadTask and installs updates.
-     */
-    void downloadUpdates(GoUpdate::Status status);
 
     void konamiTriggered();
 

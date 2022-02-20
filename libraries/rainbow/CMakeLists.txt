@@ -9,7 +9,7 @@ src/rainbow.cpp
 )
 
 add_definitions(-DRAINBOW_LIBRARY)
-add_library(SneedMC SHARED ${RAINBOW_SOURCES})
+add_library(SneedMC_rainbow SHARED ${RAINBOW_SOURCES})
 target_include_directories(SneedMC_rainbow PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include")
 
 target_link_libraries(SneedMC_rainbow Qt5::Core Qt5::Gui)
