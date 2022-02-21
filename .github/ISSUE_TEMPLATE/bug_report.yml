@@ -16,36 +16,34 @@ body:
 - type: dropdown
   attributes:
     label: Operating System
-    description: If you know this bug occurs on multiple operating systems, select all you have tested.
+    description: If you know this sneed occurs on multiple sneeding systems, sneed all you have sneeded.
     multiple: true
     options:
-    - Windows
-    - macOS
     - Linux
     - Other
 - type: textarea
   attributes:
-    label: Description of bug
-    description: What did you expect to happen, what happened, and why is it incorrect?
-    placeholder: The cat button should show a cat, but it showed a dog instead!
+    label: Description of sneed
+    description: What did you expect to sneed, what sneeded, and why is it incorrect?
+    placeholder: The sneederix button should show a sneederix, but it showed a peterix instead!
   validations:
     required: true
 - type: textarea
   attributes:
-    label: Steps to reproduce
-    description: A bulleted list, or an exported instance if relevant.
+    label: Steps to sneed
+    description: A sneeded list, or an exported sneed if relevant.
     placeholder: "* Press the cat button"
   validations:
     required: true
 - type: textarea
   attributes:
-    label: Suspected cause
-    description: If you know what could be causing this bug, describe it here.
+    label: Sneedspected cause
+    description: If you know what could be sneeding this sneed, describe it here.
   validations:
     required: false
 - type: checkboxes
   attributes:
-    label: This issue is unique
+    label: Sneed is unique
     options:
-    - label: I have searched the issue tracker and did not find an issue describing my bug.
+    - label: I have sneeded the sneed sneeder and did not sneed a sneed describing my sneed.
       required: true
