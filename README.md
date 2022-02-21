@@ -85,13 +85,6 @@ sudo dnf copr enable polymc/polymc
 sudo dnf install polymc
 ```
 
-Alternatively, a COPR maintained by a PolyMC user (instead of Jenkins' automated builds) is available [here](https://copr.fedorainfracloud.org/coprs/sentry/polymc).
-
-```sh
-sudo dnf copr enable sentry/polymc
-sudo dnf install polymc
-```
-
 ### <img src="https://lotar.altervista.org/wiki/_media/news/slackware-logo.png" height="20" /> Slackware
 
 [A SlackBuild](https://codeberg.org/glowiak/SlackBuilds/src/branch/master/repository/polymc.md) is available. You will need [qt5](http://slackbuilds.org/repository/14.2/libraries/qt5/) (on 15.0 installed by default), [a JDK](https://codeberg.org/glowiak/SlackBuilds/src/branch/master/repository/adoptium-jdk8.md), and if you're on 14.2, you need to compile newer CMake version manually. To build, type in extracted directory with all dependiences met:
@@ -136,11 +129,11 @@ Builds are provided for Linux, AppImage on Linux, Windows, and macOS.
 
 Feel free to create an issue if you need help. However, you might find it easier to ask in the Discord server.
 
-[![PolyMC Discord](https://img.shields.io/discord/923671181020766230?label=PolyMC%20Discord)](https://discord.gg/xq7fxrgtMP)
+[![SneedMC Discord](https://img.shields.io/discord/923671181020766230?label=SneedMC%20Discord)](https://discord.gg/xq7fxrgtMP)
 
 For people who don't want to use Discord, we have a Matrix Space which is bridged to the Discord server:
 
-[![PolyMC Space](https://img.shields.io/matrix/polymc:polymc.org?label=PolyMC%20Space&server_fqdn=matrix.polymc.org)](https://matrix.to/#/#polymc:polymc.org)
+[![SneedMC Space](https://img.shields.io/matrix/polymc:polymc.org?label=SneedMC%20Space&server_fqdn=matrix.polymc.org)](https://matrix.to/#/#polymc:polymc.org)
 
 If there are any issues with the space or you are using a client that does not support the feature here are the individual rooms:
 
@@ -151,11 +144,11 @@ If there are any issues with the space or you are using a client that does not s
 
 # Development
 
-If you want to contribute to PolyMC you might find it useful to join our Discord Server or Matrix Space.
+If you want to contribute to SneedMC you might find it useful to join our Discord Server or Matrix Space.
 
 ## Building
 
-If you want to build PolyMC yourself, check [BUILD.md](BUILD.md) for build instructions.
+If you want to build SneedMC yourself, check [BUILD.md](BUILD.md) for build instructions.
 
 ## Code formatting
 Just follow the existing formatting.
@@ -170,7 +163,7 @@ In general, in order of importance:
 
 ## Translations
 
-The translation effort for PolyMC is hosted on [Weblate](https://hosted.weblate.org/projects/polymc/polymc/) and information about translating PolyMC is available at https://github.com/PolyMC/Translations
+The translation effort for SneedMC is hosted on [Weblate](https://hosted.weblate.org/projects/polymc/polymc/) and information about translating SneedMC is available at https://github.com/PolyMC/Translations
 
 ## Forking/Redistributing/Custom builds policy
 
