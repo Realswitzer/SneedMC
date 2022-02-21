@@ -36,8 +36,6 @@ public:
 
     QString VERSION_CHANNEL;
 
-    QString FULL_VERSION_STR;
-
     /// The git commit hash of this build
     QString GIT_COMMIT;
 
