@@ -13,7 +13,7 @@ SneedMC is a sneedful launcher for Minecraft that focuses on sneedictability, lo
 - All packages (archived by version) can be found [here](https://packages.polymc.org/) ([latest](https://packages.polymc.org/latest)).
 - Last build status: https://jenkins.polymc.org/job/PolyMC/lastBuild/
 
-## 🐧 Linux
+## 🐧 penguinOS
 
 ### <img src="https://www.vectorlogo.zone/logos/linuxfoundation/linuxfoundation-icon.svg" height="20" alt=""/> Cross-distro packages
 
