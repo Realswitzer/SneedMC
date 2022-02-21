@@ -59,7 +59,6 @@
 #include <net/NetJob.h>
 #include <net/Download.h>
 #include <news/NewsChecker.h>
-#include <notifications/NotificationChecker.h>
 #include <tools/BaseProfiler.h>
 #include <DesktopServices.h>
 #include "InstanceWindow.h"
@@ -79,7 +78,6 @@
 #include "ui/dialogs/IconPickerDialog.h"
 #include "ui/dialogs/CopyInstanceDialog.h"
 #include "ui/dialogs/EditAccountDialog.h"
-#include "ui/dialogs/NotificationDialog.h"
 #include "ui/dialogs/ExportInstanceDialog.h"
 
 #include "KonamiCode.h"
@@ -800,17 +798,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new MainWindow
     }
 
 
-    {
-        auto checker = new NotificationChecker();
-        checker->setNotificationsUrl(QUrl(BuildConfig.NOTIFICATION_URL));
-        checker->setApplicationChannel(BuildConfig.VERSION_CHANNEL);
-        checker->setApplicationPlatform(BuildConfig.BUILD_PLATFORM);
-        checker->setApplicationFullVersion(BuildConfig.FULL_VERSION_STR);
-        m_notificationChecker.reset(checker);
-        connect(m_notificationChecker.get(), &NotificationChecker::notificationCheckFinished, this, &MainWindow::notificationsChanged);
-        checker->checkForNotifications();
-    }
-
     setSelectedInstanceById(APPLICATION->settings()->get("SelectedInstance").toString());
 
     // removing this looks stupid
@@ -1187,24 +1174,6 @@ QString intListToString(const QList<int> &list)
     }
     return slist.join(',');
 }
-void MainWindow::notificationsChanged()
-{
-    QList<NotificationChecker::NotificationEntry> entries = m_notificationChecker->notificationEntries();
-    QList<int> shownNotifications = stringToIntList(APPLICATION->settings()->get("ShownNotifications").toString());
-    for (auto it = entries.begin(); it != entries.end(); ++it)
-    {
-        NotificationChecker::NotificationEntry entry = *it;
-        if (!shownNotifications.contains(entry.id))
-        {
-            NotificationDialog dialog(entry, this);
-            if (dialog.exec() == NotificationDialog::DontShowAgain)
-            {
-                shownNotifications.append(entry.id);
-            }
-        }
-    }
-    APPLICATION->settings()->set("ShownNotifications", intListToString(shownNotifications));
-}
 
 void MainWindow::onCatToggled(bool state)
 {
@@ -1395,6 +1364,7 @@ void MainWindow::on_actionDISCORD_triggered()
 {
     DesktopServices::openUrl(QUrl(BuildConfig.DISCORD_URL));
 }
+
 
 void MainWindow::on_actionChangeInstIcon_triggered()
 {

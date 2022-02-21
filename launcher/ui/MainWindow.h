@@ -27,7 +27,6 @@
 
 class LaunchController;
 class NewsChecker;
-class NotificationChecker;
 class QToolButton;
 class InstanceProxyModel;
 class LabeledToolButton;
@@ -157,8 +156,6 @@ private slots:
 
     void startTask(Task *task);
 
-    void notificationsChanged();
-
     void defaultAccountChanged();
 
     void changeActiveAccount();
@@ -199,7 +196,6 @@ private:
     KonamiCode * secretEventFilter = nullptr;
 
     unique_qobject_ptr<NewsChecker> m_newsChecker;
-    unique_qobject_ptr<NotificationChecker> m_notificationChecker;
 
     InstancePtr m_selectedInstance;
     QString m_currentInstIcon;

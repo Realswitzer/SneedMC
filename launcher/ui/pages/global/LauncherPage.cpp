@@ -143,11 +143,6 @@ void LauncherPage::applySettings()
 {
     auto s = APPLICATION->settings();
 
-    if (ui->resetNotificationsBtn->isChecked())
-    {
-        s->set("ShownNotifications", QString());
-    }
-
     auto original = s->get("IconTheme").toString();
     //FIXME: make generic
     switch (ui->themeComboBox->currentIndex())
