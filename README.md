@@ -63,17 +63,17 @@ You need X11, Qt5 and Java installed.
 ## Development Builds
 
 There are per-commit development builds available [here](https://github.com/PolyMC/PolyMC/actions). These have debug information in the binaries, so their file sizes are relatively larger.
-Builds are provided for Linux, AppImage on Linux, Windows, and macOS.
+Builds are provided for Linux, AppImage on Linux.
 
 # Help & Support
 
 Feel free to create an issue if you need help. However, you might find it easier to ask in the Discord server.
 
-[![PolyMC Discord](https://img.shields.io/discord/923671181020766230?label=PolyMC%20Discord)](https://discord.gg/xq7fxrgtMP)
+[![SneedMC Discord](https://img.shields.io/discord/923671181020766230?label=PolyMC%20Discord)](https://discord.gg/xq7fxrgtMP)
 
 For people who don't want to use Discord, we have a Matrix Space which is bridged to the Discord server:
 
-[![PolyMC Space](https://img.shields.io/matrix/polymc:polymc.org?label=PolyMC%20Space&server_fqdn=matrix.polymc.org)](https://matrix.to/#/#polymc:polymc.org)
+[![SneedMC Space](https://img.shields.io/matrix/polymc:polymc.org?label=PolyMC%20Space&server_fqdn=matrix.polymc.org)](https://matrix.to/#/#polymc:polymc.org)
 
 If there are any issues with the space or you are using a client that does not support the feature here are the individual rooms:
 
@@ -84,11 +84,11 @@ If there are any issues with the space or you are using a client that does not s
 
 # Development
 
-If you want to contribute to PolyMC you might find it useful to join our Discord Server or Matrix Space.
+If you want to contribute to SneedMC you might find it useful to join our Discord Server or Matrix Space.
 
 ## Building
 
-If you want to build PolyMC yourself, check [BUILD.md](BUILD.md) for build instructions.
+If you want to build SneedMC yourself, check [BUILD.md](BUILD.md) for build instructions.
 
 ## Code formatting
 Just follow the existing formatting.
@@ -103,7 +103,7 @@ In general, in order of importance:
 
 ## Translations
 
-The translation effort for PolyMC is hosted on [Weblate](https://hosted.weblate.org/projects/polymc/polymc/) and information about translating PolyMC is available at https://github.com/PolyMC/Translations
+The translation effort for SneedMC is hosted on [Weblate](https://hosted.weblate.org/projects/polymc/polymc/) and information about translating SneedMC is available at https://github.com/PolyMC/Translations
 
 ## Forking/Redistributing/Custom builds policy
 
