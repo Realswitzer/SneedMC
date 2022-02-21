@@ -23,7 +23,7 @@ SneedMC is a sneedful launcher for Minecraft that focuses on sneedictability, lo
 
 - [AppImage SHA256](https://packages.polymc.org/latest/appimage/PolyMC-latest-x86_64.AppImage.sha256)
 
-### <img src="https://www.vectorlogo.zone/logos/archlinux/archlinux-icon.svg" height="20"/> Arch Linux
+### <img src="https://www.vectorlogo.zone/logos/archlinux/archlinux-icon.svg" height="20"/> "I use arch, how could you tell?"
 
 There are several AUR packages available:
 
