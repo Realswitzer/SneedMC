@@ -7,7 +7,7 @@ IDI_ICON1               ICON    DISCARDABLE     "sneedmc.ico"
 1 RT_MANIFEST "sneedmc.manifest"
 
 VS_VERSION_INFO VERSIONINFO
-FILEVERSION     1,0,0,0
+FILEVERSION     1,9,8,4
 FILEOS          VOS_NT_WINDOWS32
 FILETYPE        VFT_APP
 BEGIN
@@ -17,7 +17,7 @@ BEGIN
                 BEGIN
                         VALUE "CompanyName", "Sneederix"
                         VALUE "FileDescription", "SneedMC"
-                        VALUE "FileVersion", "1.0.0.0"
+                        VALUE "FileVersion", "1.9.8.4"
                         VALUE "ProductName", "SneedMC"
                         VALUE "ProductVersion", "1"
                 END
