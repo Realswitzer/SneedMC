@@ -40,28 +40,6 @@ yay -S sneedmc-bin
 yay -S sneedmc-git
 ```
 
-### <img src="https://www.vectorlogo.zone/logos/debian/debian-icon.svg" height="20" /> Debian
-
-We use [makedeb](https://docs.makedeb.org/) for our Debian packages.
-Several MPR packages are available:
-
-[![sneedmc](https://img.shields.io/badge/mpr-sneedmc-orange)](https://mpr.makedeb.org/packages/sneedmc)
-[![sneedmc-bin](https://img.shields.io/badge/mpr-sneedmc--bin-orange)](https://mpr.makedeb.org/packages/sneedmc-bin)
-[![sneedmc-git](https://img.shields.io/badge/mpr-sneedmc--git-orange)](https://mpr.makedeb.org/packages/sneedmc-git)
-
-```sh
-# stable source package:
-sudo tap install sneedmc
-# stable binary package:
-sudo tap install sneedmc-bin
-# latest git package:
-sudo tap install sneedmc-git
-```
-
-### <img src="https://www.vectorlogo.zone/logos/nixos/nixos-icon.svg" height="20" /> Nix
-
-A [Nix derivation](packages/nix/NIX.md) is available.
-
 ### <img src="https://www.gentoo.org/assets/img/logo/gentoo-signet.svg" height="20" /> Gentoo
 
 A Gentoo ebuild is available in the [sneed](https://git.swurl.xyz/Sneederix/overlay) overlay, named `games-action/sneedmc`.
@@ -75,51 +53,6 @@ emerge sneedmc
 # to use latest git version:
 sudo tee -a /etc/portage/package.accept_keywords <<< "=games-action/sneedmc-9999 **"
 ```
-
-### <img src="https://www.vectorlogo.zone/logos/getfedora/getfedora-icon.svg" height="20"> Fedora
-
-An RPM package is available on [COPR](https://copr.fedorainfracloud.org/coprs/polymc/polymc/).
-
-```sh
-sudo dnf copr enable polymc/polymc
-sudo dnf install polymc
-```
-
-Alternatively, a COPR maintained by a PolyMC user (instead of Jenkins' automated builds) is available [here](https://copr.fedorainfracloud.org/coprs/sentry/polymc).
-
-```sh
-sudo dnf copr enable sentry/polymc
-sudo dnf install polymc
-```
-
-### <img src="https://lotar.altervista.org/wiki/_media/news/slackware-logo.png" height="20" /> Slackware
-
-[A SlackBuild](https://codeberg.org/glowiak/SlackBuilds/src/branch/master/repository/polymc.md) is available. You will need [qt5](http://slackbuilds.org/repository/14.2/libraries/qt5/) (on 15.0 installed by default), [a JDK](https://codeberg.org/glowiak/SlackBuilds/src/branch/master/repository/adoptium-jdk8.md), and if you're on 14.2, you need to compile newer CMake version manually. To build, type in extracted directory with all dependiences met:
-
-    sudo ./polymc.SlackBuild
-    sudo installpkg /tmp/polymc-version-arch-1_SBo.tgz
-
-If you are too lazy to do all these steps, you can just download [a prebuild x86_64 package](http://glowiak.github.io/file/polymc-latest-slackware) and install it with /sbin/installpkg:
-
-    sudo /sbin/installpkg ~/Downloads/polymc-version-x86_64-1_SBo.tgz
-
-## <img src="https://www.vectorlogo.zone/logos/microsoft/microsoft-icon.svg" height="20" /> Windows
-
-[Windows (32-bit)](https://packages.polymc.org/latest/win32/win32.zip) ([SHA256](https://packages.polymc.org/latest/win32/win32.zip.sha256)) - this is a portable package, you can extract it anywhere and run it. This package needs testing.
-
-## <img src="https://www.vectorlogo.zone/logos/apple/apple-tile.svg" height="20" /> MacOS
-
-MacOS currently does not have any packages. We are still working on setting up MacOS packaging. Meanwhile, you can [build](https://github.com/PolyMC/PolyMC/blob/develop/BUILD.md#macos) it for yourself.
-
-## <img src="https://www.vectorlogo.zone/logos/freebsd/freebsd-icon.svg" height="20" /> FreeBSD
-
-For FreeBSD available are:
-
-- [AppBSD Image](http://glowiak.github.io/file/polymc-latest-fbsd64-appbsd) - a portable application, requires [AppBSD](https://codeberg.org/glowiak/appbsd/) to be installed.
-
-- [Gzipped binaries](http://glowiak.github.io/file/polymc-latest-fbsd64-raw) - traditional way to distribute, unpack and run.
-
-In both cases you need X11, Qt5 and Java installed. Both files are 64bit only.
 
 ## <img src="https://raw.githubusercontent.com/AliasIO/wappalyzer/master/src/drivers/webextension/images/icons/OpenBSD%20httpd.svg" height="20" /> OpenBSD
 
