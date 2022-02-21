@@ -40,7 +40,7 @@ yay -S sneedmc-bin
 yay -S sneedmc-git
 ```
 
-### <img src="https://www.gentoo.org/assets/img/logo/gentoo-signet.svg" height="20" /> Gentoo
+### <img src="https://www.gentoo.org/assets/img/logo/gentoo-signet.svg" height="20" /> for expert gentoo installers
 
 A Gentoo ebuild is available in the [sneed](https://git.swurl.xyz/Sneederix/overlay) overlay, named `games-action/sneedmc`.
 
